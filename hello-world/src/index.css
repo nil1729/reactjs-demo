@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #ff7c6e;
+    background: #faecc3;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background: lightblue;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(253, 249, 243);
+    padding: 1rem;
+    font-weight: 100;
+    color: rgb(139, 139, 139);
+}
+
+.main-body {
+    padding: 2rem;
+    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #faecc3;
+    border-radius: 10px;
+    overflow: hidden;
+    width: auto;
+    margin: 1rem;
+    box-shadow: 0 0 15px grey;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 -2px 3.5rem rgb(63, 61, 61);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .img {
+    width: 18em;
+    height: 15em;
+}
+
+.card .about {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.card .about h4 {
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card .about a {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 1px solid grey;
+    margin-top: 5px;
+}
+
+
+/*h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #faecc3;
+	padding: 20px;
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+	border-radius: 25px;
+	color: #ff7c6e;
+}*/
