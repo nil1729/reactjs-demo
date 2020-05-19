@@ -1,0 +1,18 @@
+::selection {
+    color: #000;
+    background: rgb(233, 236, 239);
+}
+img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.row:first-child{
+    border: none;
+}
+.row{
+    border: 2px solid rgb(209, 199, 199);
+}
+::-webkit-scrollbar{
+    width: 0;
+}
