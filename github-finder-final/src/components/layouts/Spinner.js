@@ -4,7 +4,7 @@ const Spinner = () => {
   return (
         <img
             style={loaderStyle()}
-            className="img-thumbnail" 
+            className="loader" 
             alt="LOADER"
             src={spinner}
         />

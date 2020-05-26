@@ -5,11 +5,9 @@ const Alert = () => {
     const alertContext = useContext(AlertContext);
         if(alertContext.alert !== null){
             return (
-                    <div className="container mt-2">
-                        <div className="alert alert-warning" role="alert">
+                        <div className="alert alert-danger" role="alert">
                             {`${alertContext.alert.msg}`}
                         </div>
-                    </div>
                 )
             }else{
                 return (

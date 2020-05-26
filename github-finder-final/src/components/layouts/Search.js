@@ -19,7 +19,7 @@ const  Search = () => {
         }
     }
     return (
-        <div className="container my-2">
+        <div className="form-div container">
             <form onSubmit={onSubmit} className="my-2">
                 <div className="form-group">
                     <input 
@@ -28,14 +28,15 @@ const  Search = () => {
                         value={text}
                         onChange={onChange}
                     />
-                    </div>
-                    <button type="submit" className="btn btn-dark col">Submit</button>
-                </form>
+                </div>
+                <button type="submit" className="btn search-btn col"> Search </button>
+            </form>
                 {
-                    githubContext.users.length > 0 && <button onClick={githubContext.clear} type="submit" className="btn btn-secondary col">Clear Search</button>
-                }
-                
-            </div>
+                    githubContext.users.length > 0 && <div className="clear">
+                                <button onClick={githubContext.clear} type="submit" className="btn">Clear Search</button>
+                            </div>
+                }        
+        </div>
     )
 }
 

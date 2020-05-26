@@ -8,11 +8,11 @@ const UserItem = ({user}) => {
             login
         } = user;
         return (
-            <div className="card my-2" style={{width: '18rem'}}>
+            <div className="card my-2">
                 <img src={avatar_url} className="card-img-top" alt=""/>
                 <div className="card-body">
                 <h5 className="card-title">{login}</h5>
-                <Link to={`/user/${login}`} className="btn btn-primary">More Info</Link>
+                <Link to={`/user/${login}`} className="btn">More Info</Link>
                 </div>
             </div>
         )

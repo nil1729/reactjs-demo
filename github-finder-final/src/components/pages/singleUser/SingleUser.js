@@ -34,23 +34,23 @@ const  SingleUser = ({ match }) =>  {
       
      <div className="main-body container-fluid mb-4">
     <div className="container my-2">
-      <Link to="/" className="btn btn-secondary">Back To Search</Link>
+      <Link to="/" className="btn back-btn">Back To Search</Link>
     </div>
     <div className="row p-3 m-2">
     <div className="col-md-6 d-flex flex-column align-items-center text-secondary">
       <div>
           <img src={avatar_url} style={{height: '250px'}} alt="AVATAR" className="img-fluid"/>
       </div>
-        <h3>{name}</h3>
-        <h5>Location: <span className="text-dark">{location}</span> </h5>
+        <h3 className="s-name">{name}</h3>
+        <h5>Location <span className="text-dark">{location}</span> </h5>
     </div>
     <div className="col-md-6">
     <h3 className="text-success">Bio</h3>
     <hr className="my-1"/>
     <p>{bio}</p>
-    <a href={html_url} target="_blank" className="btn btn-danger text-white">Visit Github Profile</a>
+    <a href={html_url} target="_blank" rel="noopener noreferrer" className="btn go-git-btn">Visit Github Profile</a>
     <hr className="mt-2"/>
-    <h5 className="mt-2 text-secondary">Username: <span className="text-dark">{login}</span></h5>
+    <h5 className="mt-2 text-secondary">Username <span className="text-dark">{login}</span></h5>
     </div>
     </div>
     <div className="row m-2 d-flex justify-content-center">

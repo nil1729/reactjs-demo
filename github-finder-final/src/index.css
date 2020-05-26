@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+::-webkit-scrollbar{
+    width: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection {
+    color: #000;
+    background: rgb(233, 236, 239);
+}
+#root .navbar{
+  padding: 5px 2em;
+  background-color: #ed4a5d;
+  color: #ffffff;
+}
+#root .navbar i.fa-github:before {
+  margin-right: 10px;
+}
+#root .navbar a{
+  color: #ffffff;
+  font-size: 1.2em;
+}
+.btn{
+  font-size: 1.2em; 
+}
+.searchResult{
+  margin-top: 2em;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.searchResult .card{
+  width: 15rem;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card .card-img-top{
+  border-radius: 50%;
+  height: 7em;
+  width: 7em;
+}
+.searchResult .card .btn{
+  background: #664b4f;
+  color: #ffffff;
+}
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 88888
+}
+.search-btn{
+  background-color: #868a86;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.search-btn:hover{
+  color: #ffffff!important;
+}
+.clear{
+  text-align: center;
+}
+.clear .btn{
+  margin-top: 1em;
+  background-color: #bd0d0d;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.form-div{
+  margin-top: 4em;
+}
+.alert{
+  position: absolute;
+  transform: translate(100%, 5px);
+  color: #000000;
+  font-size: 1.2em;
+}
+.go-git-btn, .back-btn{
+  border: 1px solid grey;
+}
+@media only screen and (max-width: 600px){
+  #root .navbar{
+    padding: 3px 0.5em;
+    background-color: #ed4a5d;
+    color: #ffffff;
+  }
+  #root .navbar i.fa-github:before {
+    margin-right: 5px;
+  }
+  #root .navbar a{
+    color: #ffffff;
+    font-size: 1.1em;
+  }
+  .searchResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .alert{
+    transform: translate(2em, 5px);
+  }
+  .s-name{
+    font-size: 1.2em;
+  }
 }

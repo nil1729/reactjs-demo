@@ -8,7 +8,7 @@ const User = () => {
     const githubContext = useContext(GithubContext);
     const {loading , users} = githubContext;
         return (
-            <div style={userStyle()}>
+            <div className="searchResult">
                 {loading && <Spinner/>}
                 {
                     users.map(user=>{
@@ -22,15 +22,6 @@ const User = () => {
                 }
             </div>
         )
-}
-
-const userStyle = ()=>{
-    return {
-        display: 'grid',
-        placeItems: 'center',
-        gridTemplateColumns: '1fr 1fr 1fr',
-        gridGap: '1em'
-    }
 }
 
 export default User
