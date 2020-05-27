@@ -3,7 +3,7 @@
 * This is the Tutorial for React JS.
 ---
 #### First Task ( Netflix Series List )
-* This Site is Live [here](https://jovial-raman-8b81cb.netlify.app/).
+* This Site is Live <a href="https://jovial-raman-8b81cb.netlify.app"> here </a>.
 ---
 #### Second Task ( Todo List App Using Local Storage )
 * This Site is Live [here](https://ecstatic-clarke-0cfe41.netlify.app/).

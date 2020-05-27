@@ -61,7 +61,7 @@ const AddItem = (props) => {
                     onChange={onChange}
                 />
             </div>
-            <button type="submit">POST</button>
+            <button type="submit">ADD</button>
         </form>
     </>
   )
