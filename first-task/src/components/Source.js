@@ -1,4 +1,5 @@
-const source = [{
+const source = [
+    {
         id: 1,
         imgsrc: 'http://t3.gstatic.com/images?q=tbn:ANd9GcQzBPeJBL1nrbE44py9eA0PFWzRQjQlW4NwjIBKuOMjVi4ou8UR',
         title: 'Stranger Things',
@@ -14,7 +15,7 @@ const source = [{
     },
     {
         id: 3,
-        imgsrc: 'https://www.mediaguru.com/wp-content/uploads/2018/06/House-of-cards_Netflix-768x432.jpg',
+        imgsrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/House_of_Cards_season_4.png/250px-House_of_Cards_season_4.png',
         title: 'House of Cards',
         channel: 'Netflix Original Series',
         link: 'https://www.netflix.com/in/title/70178217'

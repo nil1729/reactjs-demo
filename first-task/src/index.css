@@ -14,7 +14,9 @@
 ::-webkit-scrollbar {
     width: 0;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     background: lightblue;
     font-family: 'Jost', sans-serif;
@@ -22,14 +24,18 @@ body {
     text-transform: capitalize;
 }
 
-h1 {
-    text-align: center;
+nav {
     background-color: rgb(253, 249, 243);
     padding: 1rem;
-    font-weight: 100;
+    color: rgb(139, 139, 139);
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.paths a{
+    margin: 0 1em;
     color: rgb(139, 139, 139);
 }
-
 .main-body {
     padding: 2rem;
     flex-wrap: wrap;
@@ -85,17 +91,44 @@ img {
     border: 1px solid grey;
     margin-top: 5px;
 }
-
-
-/*h1{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #faecc3;
-	padding: 20px;
-	font-size: 2.5rem;
-	letter-spacing: 2px;
-	border-radius: 25px;
-	color: #ff7c6e;
-}*/
+.input-div,
+form{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-div input{
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2em;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 15em;
+    letter-spacing: 1px;
+}
+form button {
+    margin-top: 1.2em;
+    font-size: 1.1em;
+    background: #FDF9F3;
+    outline: none;
+    border: 1px solid grey;
+    padding: 1px 10px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'Jost', sans-serif;
+}
+@media only screen and (max-width: 600px){
+    .paths a {
+        margin: 0;
+        margin-right: 10px;
+    }
+    nav {
+        font-size: 1em;
+    }
+}
