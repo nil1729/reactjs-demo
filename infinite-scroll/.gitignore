@@ -1,4 +1,10 @@
 node_modules
+
+# Backend Secrets
+/keys.json
+
+# Client 
+
 client/.pnp
 client/.pnp.js
 

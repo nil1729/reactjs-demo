@@ -18,5 +18,5 @@
 * Task added on Repo. This is built using React Hooks. I use [`JSONplaceholder`](https://jsonplaceholder.typicode.com/) api for dummy posts.
 ---
 #### Task 6 ( Infinite Scroll Effect)
-* Task added on Repo. This is built using React Hooks and `react-infinite-scroll-component`. I use [`Unsplash`](https://unsplash.com/) api for fetching Photos. For using `Unsplash` api I have to download [`unsplash-js`](https://www.npmjs.com/package/unsplash-js) module and `node-fetch`.
+* Task added on Repo. This is built using React Hooks and `react-infinite-scroll-component`. I use [`Unsplash`](https://unsplash.com/) api for fetching Photos. For using `Unsplash` api we have to download [`unsplash-js`](https://www.npmjs.com/package/unsplash-js) module and `node-fetch`.
 ---
