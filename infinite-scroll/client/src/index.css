@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+body {
+  background: rgba(75, 83, 190, 0.883);
+  color: aliceblue;
+}
+.img-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+@media only screen and (max-width: 600px){
+  .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .img-container img{
+    margin: 1em 0;
+  }
+}
