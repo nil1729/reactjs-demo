@@ -49,3 +49,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 }
 ```
 ---
+#### Task 8 ( [`Material UI`](https://material-ui.com/)  and Context API)
+* Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for Searching Photos.
+---
