@@ -1,0 +1,3 @@
+export const SEARCH_PHOTOS = 'SEARCH_PHOTOS';
+export const CLEAR_SEARCH = 'CLEAR_SEARCH';
+
