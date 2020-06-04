@@ -16,7 +16,7 @@ const checkAuthentication = require('../middleware/checkAuthentication');
 router.get('/', checkAuthentication , async(req, res) => {
     try {
         const foundUser = await User.findById(req.user.id).select("-password");
-        res.status(401).json(foundUser);
+        res.status(200).json(foundUser);
     } catch (e) {
         res.status(500).json({
             msg: 'Server Error'

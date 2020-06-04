@@ -1,6 +1,6 @@
-
-# dependencies
 node_modules
+# dependencies
+
 /client/node_modules
 /client/.pnp
 /client/.pnp.js

@@ -7,7 +7,9 @@ connectDB();
 app.use(express.json({extended: true}));
 
 app.get('/', (req, res) => {
-    res.send('Welcome');
+    res.status(200).json({
+        msg:'Welcome'
+    });
 });
 
 app.use('/api/auths', require('./routes/auths'));
