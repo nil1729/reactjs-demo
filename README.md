@@ -1,6 +1,6 @@
 ## Learning ReactJS
 
-* This is the Tutorial for React JS.
+* Simple Tasks done by me while learning `React JS`.
 ---
 #### Task 1 ( Netflix Series List )
 * This Site is Live [here](https://jovial-raman-8b81cb.netlify.app).
@@ -28,7 +28,6 @@
 ---
 #### Task 8 ( [`Material UI`](https://material-ui.com/)  and Context API)
 * Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for Searching Photos.
----
 ---
 #### Task 9 ( Multi Step Form using [`Material UI`](https://material-ui.com/))
 * This is built using React Hooks and for Styling I use  `Metarial UI`.
