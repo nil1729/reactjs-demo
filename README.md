@@ -23,31 +23,8 @@
 #### Task 7 (MERN Authentication using JWT)
 * This Task is done by using `React Hooks` and `Context API`
 * This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website. 
-* For Authentication I use JWT(JsonWebToken). 
-* Here is a Secret Page called /home and it is secured by Private Route Setup
-* ##### Private Route Setup:
-```
-// import Dependencies
-
-const PrivateRoute = ({ component: Component, ...rest }) => {
-    
-    // Logics and Dependencies for Authentication
-
-    return (
-        <Route
-            {...rest}
-            render={props=>
-            !isAuthenticated && !loading?
-            (
-                <Redirect to="/login" />
-            ):
-            (
-                <Component {...props}/>
-            )    
-        }/>
-    )
-}
-```
+* For Authentication I use [JWT](https://jwt.io/JsonWebToken). 
+* Here is a Secret Page at /home and it is secured by Private Route Setup
 ---
 #### Task 8 ( [`Material UI`](https://material-ui.com/)  and Context API)
 * Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for Searching Photos.
