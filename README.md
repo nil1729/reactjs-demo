@@ -20,3 +20,31 @@
 #### Task 6 ( Infinite Scroll Effect and MERN intro)
 * Task added on Repo. This is built using React Hooks and `react-infinite-scroll-component`. I use [`Unsplash`](https://unsplash.com/) api for fetching Photos. For using `Unsplash` api we have to download [`unsplash-js`](https://www.npmjs.com/package/unsplash-js) module and `node-fetch`.
 ---
+#### Task 7 (MERN Authentication using JWT)
+* This Task is done by using `React Hooks` and `Context API`
+* This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website. 
+* For Authentication I use JWT(JsonWebToken). 
+* Here is a Secret Page called /home and it is secured by Private Route Setup
+* Private Route Setup:
+```
+// import Dependencies
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
+    
+    // Logics and Dependencies for Authentication
+
+    return (
+        <Route
+            {...rest}
+            render={props=>
+            !isAuthenticated && !loading?
+            (
+                <Redirect to="/login" />
+            ):
+            (
+                <Component {...props}/>
+            )    
+        }/>
+    )
+}
+```
