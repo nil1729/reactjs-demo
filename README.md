@@ -25,7 +25,7 @@
 * This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website. 
 * For Authentication I use JWT(JsonWebToken). 
 * Here is a Secret Page called /home and it is secured by Private Route Setup
-* Private Route Setup:
+* ##### Private Route Setup:
 ```
 // import Dependencies
 
