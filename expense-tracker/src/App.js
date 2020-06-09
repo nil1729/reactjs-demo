@@ -19,12 +19,15 @@ const App = () => {
 
   return (
     <TxnState>
+    <>
     <div className="container center main">
        <h4 style={{fontWeight:'700'}}>Expense Tracker</h4>
        <Balance/>
        <History/>
        <Transaction/>
     </div>
+    <blockquote style={{width:'fit-content', margin:'2em auto'}}>Made With <span className="red-text">{'\u2764'}</span> by Nilanjan Deb</blockquote>
+    </>
     </TxnState>
   )
 }

@@ -1,5 +1,4 @@
 import React, {useContext, useEffect} from 'react'
-import PropTypes from 'prop-types'
 import TxnContext from '../context/transactions/txnContext';
 
 const Balance = () => {
@@ -44,8 +43,5 @@ const Balance = () => {
   )
 }
 
-Balance.propTypes = {
-
-}
 
 export default Balance

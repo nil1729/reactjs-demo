@@ -1,5 +1,4 @@
 import React, {useState, useContext} from 'react'
-import PropTypes from 'prop-types'
 import M from 'materialize-css/dist/js/materialize.min.js';
 import TxnContext from '../context/transactions/txnContext';
 
@@ -78,10 +77,6 @@ const Transaction = () => {
         </form>
     </div>
   )
-}
-
-Transaction.propTypes = {
-
 }
 
 export default Transaction

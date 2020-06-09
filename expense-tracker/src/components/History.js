@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import PropTypes from 'prop-types'
 import HistoryItem from './HistoryItem';
 
 import TxnContext from '../context/transactions/txnContext';
