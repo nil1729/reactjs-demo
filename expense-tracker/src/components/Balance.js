@@ -19,7 +19,7 @@ const Balance = () => {
     <div className="container" style={{textTransform: 'uppercase'}}>
         <div className="card-panel">
             <p className="left-align" style={{fontSize:'1.2em'}}>Your Balance</p>
-            <h4 className="left-align" style={balanceStyle()}>{`$`}{balance}</h4>
+            <h4 className="left-align" style={balanceStyle()}>{balance<0?'- ':''}{`$`}{balance>0?balance:-balance}</h4>
         </div>
         <div className="white row balance">
             <div className="col s6">
