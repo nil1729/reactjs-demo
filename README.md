@@ -57,4 +57,4 @@ Searching Photos.
 * This Site is Live [here](https://laughing-cray-b07fd1.netlify.app/).
 
 ---
-#### Made With :heart: by [Nilanjan Deb](https://github.com/nil1729).
+<p style="text-align: center;">Made With<span style="color: red;"> &#10084; </span>by <a href="https://github.com/nil1729" target="_blank"> Nilanjan Deb </a> </p>
