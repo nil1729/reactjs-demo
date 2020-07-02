@@ -1,6 +1,11 @@
 node_modules
 # dependencies
 
+# Secrets
+default.json
+.git
+production.json
+
 /client/node_modules
 /client/.pnp
 /client/.pnp.js
