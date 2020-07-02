@@ -43,6 +43,7 @@
 
 #### Task 7 (MERN Authentication using JWT)
 
+- This is site is hosted on `Heroku` and visit [here](https://jwt--mern.herokuapp.com).
 - This Task is done by using `React Hooks` and `Context API`
 - This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website.
 - For Authentication I use [JWT](https://jwt.io/JsonWebToken).
@@ -52,6 +53,7 @@
 
 #### Task 8 ( [`Material UI`](https://material-ui.com/) and Context API)
 
+- This site is Live [here](https://react-v1-ui.web.app/).
 - Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for
   Searching Photos.
 
@@ -59,6 +61,7 @@
 
 #### Task 9 ( Multi Step Form using [`Material UI`](https://material-ui.com/))
 
+- Site is hosted on `Firebase`, Visit [here](https://pagination-v1.web.app/).
 - This is built using React Hooks and for Styling I use `Metarial UI`.
 
 ---
