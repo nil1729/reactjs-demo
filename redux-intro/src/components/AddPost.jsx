@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { addPost } from '../actions/postAction.js';
 
-const AddPost = ({ newPost }) => {
+const AddPost = ({ addPost }) => {
     const [showModal, setShowModal] = useState(false);
     const handleModal = () => {
         setShowModal(!showModal);
@@ -12,8 +14,10 @@ const AddPost = ({ newPost }) => {
         e.preventDefault();
         const title = titleEl.current.value;
         const body = bodyEl.current.value;
-        await newPost({ title, body, userId: Math.ceil(Math.random() * 10) });
+        await addPost({ title, body, userId: Math.ceil(Math.random() * 10) });
         setShowModal(!showModal);
+        titleEl.current.value = '';
+        bodyEl.current.value = '';
     };
     return (
         <>
@@ -56,7 +60,7 @@ const AddPost = ({ newPost }) => {
 }
 
 AddPost.propTypes = {
-    newPost: PropTypes.func.isRequired,
+    addPost: PropTypes.func.isRequired,
 }
 
-export default AddPost
+export default connect(null, { addPost })(AddPost);

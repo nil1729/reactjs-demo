@@ -29,6 +29,7 @@ button {
 .add-post-btn {
   position: absolute;
   right: 10px;
+  top: 1em;
 }
 
 .modal {
