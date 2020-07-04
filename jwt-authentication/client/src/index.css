@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
@@ -16,10 +17,15 @@ code {
   .form.jumbotron {
     width: 90% !important;
   }
+
+  .home.jumbotron {
+    margin-top: 4em !important;
+  }
 }
 
 .navbar button {
   box-shadow: none !important;
+  outline: none !important;
 }
 
 form button {

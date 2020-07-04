@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
-import { logout } from '../actions/AuthActions';
+import { logout, loadUser } from '../actions/AuthActions';
 
 
-const Navbar = ({ auths, logout }) => {
+const Navbar = ({ auths, logout, loadUser }) => {
+    useEffect(() => {
+        loadUser();
+        // eslint-disable-next-line
+    }, []);
+    const [open, setOpen] = useState(false);
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <span className="navbar-brand">JWT_AUTH</span>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-brand">JWT Noob</span>
+            <button onClick={() => { setOpen(!open); }} className="navbar-toggler" type="button" >
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarColor01">
-                <ul className="navbar-nav ml-auto d-flex align-items-center">
+            <div style={{ display: open ? 'block' : '' }} className="collapse navbar-collapse">
+                <ul onClick={() => { setOpen(!open); }} className="navbar-nav ml-auto d-flex align-items-center">
                     {
                         auths.token && (<li className="nav-item">
                             <NavLink className="nav-link lead" to="/secret">Home</NavLink>
@@ -42,4 +47,4 @@ const mapStateToProps = state => ({
     auths: state.auths
 });
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(mapStateToProps, { logout, loadUser })(Navbar);

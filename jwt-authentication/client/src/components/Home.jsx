@@ -13,8 +13,8 @@ const Home = ({ auths }) => {
         // eslint-disable-next-line
     }, [auths]);
     return (
-        <div className="container mb-0">
-            <div className="jumbotron pt-1 pb-3 mb-0">
+        <div className="container my-auto">
+            <div className="home jumbotron pt-1 pb-3 m-auto">
                 <p className="lead text-center text-danger">Welcome {auths.user && auths.user.name}</p>
                 <div className="container">
                     <img src={photo} alt="Secret" className="img-fluid" />

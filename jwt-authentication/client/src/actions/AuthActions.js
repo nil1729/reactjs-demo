@@ -1,12 +1,14 @@
 import {
     REGISTER_USER,
     LOGIN_USER,
-    LOGOUT
+    LOGOUT,
+    LOAD_USER
 } from './types';
 
-const sendRequest = async (query) => {
+const sendRequest = async (query, token = '') => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("x-auth-token", token);
     const requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -18,7 +20,40 @@ const sendRequest = async (query) => {
     return JSONData;
 }
 
-export const registerUser = (user) => async dispatch => {
+export const loadUser = () => async dispatch => {
+    try {
+        const authData = JSON.parse(localStorage.getItem('AuthData'));
+        if (!authData) {
+            return dispatch({
+                type: LOGOUT
+            });
+        }
+        const query = {
+            query: `
+                query {
+                    loadUser {
+                        name
+                        email
+                    }
+                }
+            `
+        };
+        const data = await sendRequest(query, authData.token);
+        if (data.errors) {
+            return dispatch({
+                type: LOGOUT
+            });
+        }
+        dispatch({
+            type: LOAD_USER,
+            payload: authData
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+export const registerUser = user => async dispatch => {
     try {
         const query = {
             query: `
@@ -46,7 +81,7 @@ export const registerUser = (user) => async dispatch => {
     }
 };
 
-export const loginUser = (user) => async dispatch => {
+export const loginUser = user => async dispatch => {
     try {
         const query = {
             query: `
