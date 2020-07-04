@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media only screen and (max-width: 768px) {
+  .form.jumbotron {
+    width: 90% !important;
+  }
+}
+
+form button {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
