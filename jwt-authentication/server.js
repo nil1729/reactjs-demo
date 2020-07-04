@@ -6,8 +6,15 @@ if (process.env.NODE_ENV !== 'production') {
 };
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const isAuth = require('./middleware/isAuth');
 
+
+//! make API Cross Site accessible for Development
+if (process.env.NODE_ENV !== 'production') {
+    app.use(cors());
+    console.log('CORS Enabled');
+}
 
 //! GraphQL
 const graphqlHTTP = require('express-graphql');
@@ -17,7 +24,6 @@ const rootValue = require('./graphql/resolvers');
 //! Datebase Connection
 const connectDB = require('./config/db');
 connectDB(process.env.MONGO_URI);
-
 
 //! Body Parser Setup
 app.use(express.json());
