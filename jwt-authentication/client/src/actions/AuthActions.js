@@ -1,6 +1,7 @@
 import {
     REGISTER_USER,
-    LOGIN_USER
+    LOGIN_USER,
+    LOGOUT
 } from './types';
 
 const sendRequest = async (query) => {
@@ -72,3 +73,9 @@ export const loginUser = (user) => async dispatch => {
         console.log(e);
     }
 }
+
+export const logout = () => {
+    return {
+        type: LOGOUT
+    }
+};

@@ -14,6 +14,7 @@ const Auth = ({ registerUser, loginUser, auths }) => {
         if (auths.token) {
             history.push('/secret');
         }
+        // eslint-disable-next-line
     }, [auths]);
     const resetForm = () => {
         if (!authLogin) {

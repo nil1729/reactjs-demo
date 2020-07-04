@@ -10,6 +10,7 @@ const Home = ({ auths }) => {
         if (!auths.token) {
             history.push('/auth');
         }
+        // eslint-disable-next-line
     }, [auths]);
     return (
         <div className="container mb-0">

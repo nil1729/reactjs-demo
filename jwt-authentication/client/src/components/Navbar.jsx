@@ -1,8 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
+import { logout } from '../actions/AuthActions';
 
-const Navbar = ({ auths }) => {
+
+const Navbar = ({ auths, logout }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <span className="navbar-brand">JWT_AUTH</span>
@@ -11,7 +13,7 @@ const Navbar = ({ auths }) => {
             </button>
 
             <div className="collapse navbar-collapse" id="navbarColor01">
-                <ul className="navbar-nav ml-auto">
+                <ul className="navbar-nav ml-auto d-flex align-items-center">
                     {
                         auths.token && (<li className="nav-item">
                             <NavLink className="nav-link lead" to="/secret">Home</NavLink>
@@ -25,6 +27,11 @@ const Navbar = ({ auths }) => {
                             <NavLink className="nav-link lead" to="/auth">Autheticate</NavLink>
                         </li>)
                     }
+                    {
+                        auths.token && (<li className="nav-item">
+                            <span style={{ cursor: 'pointer' }} onClick={() => { logout() }} className="nav-link lead text-light">Logout</span>
+                        </li>)
+                    }
                 </ul>
             </div>
         </nav>
@@ -35,4 +42,4 @@ const mapStateToProps = state => ({
     auths: state.auths
 });
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);

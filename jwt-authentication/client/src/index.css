@@ -18,6 +18,10 @@ code {
   }
 }
 
+.navbar button {
+  box-shadow: none !important;
+}
+
 form button {
   outline: none !important;
   box-shadow: none !important;
