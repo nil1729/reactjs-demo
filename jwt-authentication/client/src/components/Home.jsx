@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import photo from './photo.jpg';
 import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 
 const Home = ({ auths }) => {
     const history = useHistory();
@@ -22,6 +22,10 @@ const Home = ({ auths }) => {
             </div>
         </div>
     )
+}
+
+Home.propTypes = {
+    auths: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => ({

@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { registerUser, loginUser } from '../actions/AuthActions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Alert from './Alert';
 
 const Auth = ({ registerUser, loginUser, auths }) => {
     const history = useHistory();
@@ -48,6 +49,7 @@ const Auth = ({ registerUser, loginUser, auths }) => {
     };
     return (
         <div className="container">
+            <Alert />
             <div className="form jumbotron mx-auto mt-4" style={{ width: '50%' }}>
                 <form onSubmit={onSubmit}>
                     <h2 className="text-center">{authLogin ? 'Login' : 'Register'} User</h2>
@@ -97,6 +99,7 @@ const Auth = ({ registerUser, loginUser, auths }) => {
 Auth.propTypes = {
     registerUser: PropTypes.func.isRequired,
     loginUser: PropTypes.func.isRequired,
+    auths: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => ({

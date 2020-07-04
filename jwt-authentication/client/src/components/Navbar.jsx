@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { logout, loadUser } from '../actions/AuthActions';
-
+import PropTypes from 'prop-types';
 
 const Navbar = ({ auths, logout, loadUser }) => {
     useEffect(() => {
@@ -41,6 +41,12 @@ const Navbar = ({ auths, logout, loadUser }) => {
             </div>
         </nav>
     )
+}
+
+Navbar.propTypes = {
+    auths: PropTypes.object.isRequired,
+    logout: PropTypes.func.isRequired,
+    loadUser: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({

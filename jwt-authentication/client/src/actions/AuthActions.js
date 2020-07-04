@@ -2,7 +2,9 @@ import {
     REGISTER_USER,
     LOGIN_USER,
     LOGOUT,
-    LOAD_USER
+    LOAD_USER,
+    SET_ALERT,
+    REMOVE_ALERT
 } from './types';
 
 const sendRequest = async (query, token = '') => {
@@ -24,9 +26,7 @@ export const loadUser = () => async dispatch => {
     try {
         const authData = JSON.parse(localStorage.getItem('AuthData'));
         if (!authData) {
-            return dispatch({
-                type: LOGOUT
-            });
+            return;
         }
         const query = {
             query: `
@@ -41,7 +41,10 @@ export const loadUser = () => async dispatch => {
         const data = await sendRequest(query, authData.token);
         if (data.errors) {
             return dispatch({
-                type: LOGOUT
+                type: SET_ALERT,
+                payload: [{
+                    message: 'Please Login Again'
+                }]
             });
         }
         dispatch({
@@ -70,7 +73,10 @@ export const registerUser = user => async dispatch => {
         }
         const data = await sendRequest(query);
         if (data.errors) {
-            return console.log(data.errors);
+            return dispatch({
+                type: SET_ALERT,
+                payload: data.errors
+            });
         }
         dispatch({
             type: REGISTER_USER,
@@ -98,7 +104,10 @@ export const loginUser = user => async dispatch => {
         };
         const data = await sendRequest(query);
         if (data.errors) {
-            return console.log(data.errors);
+            return dispatch({
+                type: SET_ALERT,
+                payload: data.errors
+            });
         }
         dispatch({
             type: LOGIN_USER,
@@ -112,5 +121,12 @@ export const loginUser = user => async dispatch => {
 export const logout = () => {
     return {
         type: LOGOUT
+    }
+};
+
+
+export const removeAlert = () => {
+    return {
+        type: REMOVE_ALERT
     }
 };

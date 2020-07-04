@@ -2,12 +2,15 @@ import {
     REGISTER_USER,
     LOGIN_USER,
     LOGOUT,
-    LOAD_USER
+    LOAD_USER,
+    SET_ALERT,
+    REMOVE_ALERT
 } from '../actions/types';
 
 const initialState = {
     token: null,
-    user: null
+    user: null,
+    errors: null
 };
 
 export default (state = initialState, action) => {
@@ -37,7 +40,20 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 token: null,
-                    user: null
+                    user: null,
+                    errors: [{
+                        message: 'Successfully logged out'
+                    }]
+            };
+        case SET_ALERT:
+            return {
+                ...state,
+                errors: action.payload
+            };
+        case REMOVE_ALERT:
+            return {
+                ...state,
+                errors: null
             };
         default:
             return state;

@@ -28,6 +28,7 @@ code {
   outline: none !important;
 }
 
+.alert button,
 form button {
   outline: none !important;
   box-shadow: none !important;
