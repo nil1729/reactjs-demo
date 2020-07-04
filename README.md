@@ -42,13 +42,13 @@
 
 ---
 
-#### Task 7 (MERN Authentication using JWT)
+#### Task 7 (JWT Authentication using Redux and GraphQL)
 
-- This is site is hosted on `Heroku` and visit [here](https://jwt--mern.herokuapp.com).
-- This Task is done by using `React Hooks` and `Context API`
+- This is site is hosted on `Heroku` and visit [here](https://jwt-noob.herokuapp.com).
+- This Task is done by using `React Hooks` and `Redux`
 - This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website.
 - For Authentication I use [JWT](https://jwt.io/JsonWebToken).
-- Here is a Secret Page at /home and it is secured by Private Route Setup
+- Backened APIs are built using `GraphQL`
 
 ---
 
