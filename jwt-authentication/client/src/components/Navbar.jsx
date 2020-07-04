@@ -18,7 +18,7 @@ const Navbar = ({ auths }) => {
                         </li>)
                     }
                     <li className="nav-item">
-                        <NavLink className="nav-link lead" to="/">About</NavLink>
+                        <NavLink className="nav-link lead" to="/about">About</NavLink>
                     </li>
                     {
                         !auths.token && (<li className="nav-item">

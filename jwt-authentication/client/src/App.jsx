@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import Auth from './components/Auth';
 import Home from './components/Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './components/About';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
 // Redux
@@ -16,8 +17,10 @@ const App = () => {
         <>
           <Navbar />
           <Switch>
+            <Route exact path="/about" component={About} />
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/secret" component={Home} />
+            <Redirect from='/' to='/about' />
           </Switch>
         </>
       </Router>
