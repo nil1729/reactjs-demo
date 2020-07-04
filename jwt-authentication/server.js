@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const isAuth = require('./middleware/isAuth');
-
+const path = require('path');
 
 //! make API Cross Site accessible for Development
 if (process.env.NODE_ENV !== 'production') {
@@ -38,6 +38,12 @@ app.use('/api_v2', graphqlHTTP({
     graphiql: process.env.NODE_ENV === 'production' ? false : true
 }));
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 //! Server Port Setup
 const PORT = process.env.PORT;
