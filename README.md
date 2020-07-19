@@ -1,63 +1,66 @@
-## Learning ReactJS
+## React JS Noob
 
-- Simple Projects done by me while learning `React JS`.
+- Understanding React JS and MERN Stack Development.
 
 ---
 
-1. #### Netflix Series List
+#### Netflix Series List
 
-   - This Site is Live [here](https://jovial-raman-8b81cb.netlify.app).
+- This Site is Live [here](https://jovial-raman-8b81cb.netlify.app).
 
-1. #### Todo List App Using Local Storage
+#### Todo List App Using Local Storage
 
-   - This Site is Live [here](https://ecstatic-clarke-0cfe41.netlify.app/).
+- This Site is Live [here](https://ecstatic-clarke-0cfe41.netlify.app/).
 
-1. #### Github Profile Finder Using axios
+#### Github Profile Finder Using axios
 
-   - This Site is Live [here](https://keen-heyrovsky-4203d6.netlify.app/).
+- This Site is Live [here](https://keen-heyrovsky-4203d6.netlify.app/).
 
-1. #### Github Profile Finder using Context API
+#### Github Profile Finder using Context API
 
-   - This Site is Live [here](https://github-finder-nil.web.app/).
+- This Site is Live [here](https://github-finder-nil.web.app/).
 
-1. #### Adaptive Pagination
+#### Adaptive Pagination
 
-   - This site is Live [here](https://pagination-v1.web.app/).
-   - Task added on Repo. This is built using React Hooks. I use [`JSONplaceholder`](https://jsonplaceholder.typicode.com/) api for dummy posts.
+- This site is Live [here](https://pagination-v1.web.app/).
+- Task added on Repo. This is built using React Hooks. I use [`JSONplaceholder`](https://jsonplaceholder.typicode.com/) api for dummy posts.
 
-1. #### Infinite Scroll Effect and MERN intro
+#### Infinite Scroll Effect and MERN intro
 
-   - This site is live [here](https://infi--scroll.herokuapp.com/).
-   - Task added on Repo. This is built using React Hooks and `react-infinite-scroll-component`. I use [`Unsplash`](https://unsplash.com/) api for fetching Photos. For using `Unsplash` api we have to download [`unsplash-js`](https://www.npmjs.com/package/unsplash-js) module and `node-fetch`.
+- This site is live [here](https://infi--scroll.herokuapp.com/).
+- Task added on Repo. This is built using React Hooks and `react-infinite-scroll-component`. I use [`Unsplash`](https://unsplash.com/) api for fetching Photos. For using `Unsplash` api we have to download [`unsplash-js`](https://www.npmjs.com/package/unsplash-js) module and `node-fetch`.
 
-1. #### JWT Authentication using Redux and GraphQL
+#### JWT Authentication using Redux and GraphQL
 
-   - This is site is hosted on `Heroku` and visit [here](https://jwt-noob.herokuapp.com).
-   - This Task is done by using `React Hooks` and `Redux`
-   - This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website.
-   - For Authentication I use [JWT](https://jwt.io/JsonWebToken).
-   - Backened APIs are built using `GraphQL`
+- This is site is hosted on `Heroku` and visit [here](https://jwt-noob.herokuapp.com).
+- This Task is done by using `React Hooks` and `Redux`
+- This is one kind of `Boilerplate code` which may included in any kind of MERN Stack website.
+- For Authentication I use [JWT](https://jwt.io/JsonWebToken).
+- Backened APIs are built using `GraphQL`
 
-1. #### [`Material UI`](https://material-ui.com/) and Context API
+#### [`Material UI`](https://material-ui.com/) and Context API
 
-   - This site is Live [here](https://react-v1-ui.web.app/).
-   - Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for
-     Searching Photos.
+- This site is Live [here](https://react-v1-ui.web.app/).
+- Task added on Repo. This is built using React Hooks. I use [`Pixabay`](https://pixabay.com/) api for
+  Searching Photos.
 
-1. #### Multi Step Form using [`Material UI`](https://material-ui.com/)
+#### Multi Step Form using [`Material UI`](https://material-ui.com/)
 
-   - Site is hosted on `Firebase`, Visit [here](https://pagination-v1.web.app/).
-   - This is built using React Hooks and for Styling I use `Metarial UI`.
+- Site is hosted on `Firebase`, Visit [here](https://pagination-v1.web.app/).
+- This is built using React Hooks and for Styling I use `Metarial UI`.
 
-1. #### Expense Tracker using Context API and Styled using [`Materialize CSS`](https://materializecss.com/)
+#### Expense Tracker using Context API and Styled using [`Materialize CSS`](https://materializecss.com/)
 
-   - This Site is Live [here](https://laughing-cray-b07fd1.netlify.app/).
+- This Site is Live [here](https://laughing-cray-b07fd1.netlify.app/).
 
-1. #### Simple implementation of REDUX
+#### Simple implementation of REDUX
 
-   - This site is live [here](https://redux-noob.web.app/).
-1. #### React Firebase Authentication
+- This site is live [here](https://redux-noob.web.app/).
+
+#### React Firebase Authentication
+
     - This Site is live [here](https://react-firebase-auth-nil.web.app/auth)
+
 ---
 
 <p style="text-align: center;">Made With<span style="color: red;"> &#10084; </span>by <a href="https://github.com/nil1729" target="_blank"> Nilanjan Deb </a> </p>
