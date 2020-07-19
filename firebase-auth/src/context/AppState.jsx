@@ -15,17 +15,24 @@ const AppState = props => {
     const initialState = {
         isAuthenticated: null,
         loading: true,
-        authError: null
+        authError: null,
+        user: null
     }
     const [state, dispatch] = useReducer(appReducer, initialState);
 
     const loadUser = () => {
         app.auth().onAuthStateChanged(function (user) {
             if (user) {
+                const { providerData } = user;
                 dispatch({
                     type: LOAD_USER,
+                    payload: providerData[0]
                 });
-            }
+            } else {
+                dispatch({
+                    type: AUTH_ERROR,
+                })
+            };
         });
     }
     const signOut = () => {
@@ -74,6 +81,7 @@ const AppState = props => {
                 isAuthenticated: state.isAuthenticated,
                 loading: state.loading,
                 authError: state.authError,
+                user: state.user,
                 loadUser,
                 signOut,
                 signIn,

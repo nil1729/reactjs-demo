@@ -10,7 +10,8 @@ export default (state, action) => {
             return {
                 ...state,
                 isAuthenticated: true,
-                loading: false
+                loading: false,
+                user: action.payload
             }
         case SIGN_OUT:
             return {
@@ -21,6 +22,7 @@ export default (state, action) => {
             return {
                 ...state,
                 isAuthenticated: false,
+                loading: false,
                 authError: action.payload
             }
         case CLEAR_ERROR:

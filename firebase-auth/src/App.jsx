@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Auth from './components/pages/Auth';
 import PrivateRoute from './components/routes/PrivateRoute';
 import AppContext from './context/appContext';
+import Navbar from './components/layouts/Navbar';
 const App = () => {
   const appContext = useContext(AppContext);
   const { loadUser } = appContext;
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/auth" component={Auth} />
