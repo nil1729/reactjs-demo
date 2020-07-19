@@ -59,7 +59,7 @@
 
 #### React Firebase Authentication
 
-    - This Site is live [here](https://react-firebase-auth-nil.web.app/auth)
+- This Site is live [here](https://react-firebase-auth-nil.web.app/auth)
 
 ---
 
