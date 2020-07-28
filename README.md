@@ -2,7 +2,7 @@
 
 - Understanding React JS and MERN Stack Development.
 
-### Simple Projects For Learning React
+## Simple Projects For Learning React
 
 #### Netflix Series List
 
