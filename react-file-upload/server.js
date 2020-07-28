@@ -9,17 +9,16 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.use(expressFileUpload());
 
-app.post('/api_v1_upload', async (req, res) => {
+app.post('/upload', async (req, res) => {
 	if (!req.files || Object.keys(req.files).length === 0) {
 		return res.status(400).json({
-			message: 'No files were uploaded.',
+			message: 'No files werers uploaded.',
 		});
 	}
 	let uploadedFile = req.files.image;
-	const fileName = `${uploadedFile.name.split('.')[0]}-${new Date().getTime()}`;
-	const extName = uploadedFile.name.split('.')[1];
+
 	uploadedFile.mv(
-		__dirname + `/client/public/uploads/${fileName}.${extName}`,
+		__dirname + `/client/public/uploads/${uploadedFile.name}`,
 		function (err) {
 			if (err)
 				return res.status(500).json({
@@ -27,10 +26,10 @@ app.post('/api_v1_upload', async (req, res) => {
 				});
 
 			res.status(200).json({
-				message: 'Files Uploaded Successfully',
+				message: 'File Uploaded Successfully',
 				file: {
-					name: fileName,
-					originalName: uploadedFile.name,
+					fileName: uploadedFile.name,
+					filePath: `/uploads/${uploadedFile.name}`,
 				},
 			});
 		}
