@@ -2,7 +2,7 @@
 
 - Understanding React JS and MERN Stack Development.
 
----
+### Simple Projects For Learning React
 
 #### Netflix Series List
 
@@ -63,7 +63,7 @@
 
 #### React-Express File Upload
 
-- This simple React App that shows how File Upload works with NodeJS. [ This is a Simple Demo. This is can not be used in Production level Applications ]. Here Uploaded Files stored on Local File System (Which is not Recommended).
+- This simple React App that shows how File Upload works with NodeJS. **[ This is a Simple Demo. This is can not be used in Production level Applications ]**. Here Uploaded Files stored on Local File System **(Which is not Recommended)**.
 
 - For See How it works.
   - Clone this Repository
