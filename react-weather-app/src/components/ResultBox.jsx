@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 const ResultBox = ({ weatherStatus, error, loading }) => {
 	const [icon, setIcon] = useState('unknown');
 	const [weather, setWeather] = useState(null);
+	const [temperatureUnit, setTemperatureUnit] = useState('C');
+	const [temperature, setTemperature] = useState(null);
 
 	useEffect(() => {
 		if (error && !loading) {
@@ -10,10 +12,22 @@ const ResultBox = ({ weatherStatus, error, loading }) => {
 		} else if (weatherStatus && !loading) {
 			setIcon(weatherStatus.icon);
 			setWeather(weatherStatus);
+			setTemperature(weatherStatus.temperature);
+			setTemperatureUnit('C');
 		} else if (loading) {
 			setIcon('unknown');
 		}
 	}, [weatherStatus, error, loading]);
+
+	const changeTemperatureUnit = () => {
+		if (temperatureUnit === 'C') {
+			setTemperature(Math.floor((temperature * 9) / 5 + 32));
+			setTemperatureUnit('F');
+		} else {
+			setTemperature(weatherStatus.temperature);
+			setTemperatureUnit('C');
+		}
+	};
 
 	return (
 		<div className='result-box'>
@@ -28,7 +42,9 @@ const ResultBox = ({ weatherStatus, error, loading }) => {
 				</div>
 			) : (
 				<div className='weather-box'>
-					<h3>{weather ? weather.temperature : '-'} °C</h3>
+					<h3 onClick={changeTemperatureUnit}>
+						{weather ? temperature : '-'} °{temperatureUnit}
+					</h3>
 					<h4>{weather ? weather.description : '-'} </h4>
 					<h5>{weather ? `${weather.place}, ${weather.country}` : '-'} </h5>
 				</div>

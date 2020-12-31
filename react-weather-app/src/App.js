@@ -5,7 +5,7 @@ import ResultBox from './components/ResultBox';
 
 const App = () => {
 	const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.REACT_APP_WEATHER_API_KEY}`;
-	const MAPQUEST_API = `http://www.mapquestapi.com/geocoding/v1/address?key=${process.env.REACT_APP_MAPQUEST_API_KEY}`;
+	const MAPQUEST_API = `https://cors-anywhere.herokuapp.com/http://www.mapquestapi.com/geocoding/v1/address?key=${process.env.REACT_APP_MAPQUEST_API_KEY}`;
 
 	const [position, setPosition] = useState(null);
 
