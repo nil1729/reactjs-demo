@@ -5,6 +5,7 @@ const Search = ({ searchLocation, searching }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		if (text.trim().length === 0) return setText('');
 		searchLocation(text);
 		setText('');
 	};
